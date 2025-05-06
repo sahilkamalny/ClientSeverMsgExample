@@ -10,45 +10,45 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="588.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.clientsevermsgexample.MainController">
-   <children>
-      <Label fx:id="server_lbl" layoutX="25.0" layoutY="24.0" text="Server" />
-      <TextField fx:id="urlName" layoutX="65.0" layoutY="20.0" prefHeight="25.0" prefWidth="356.0" />
-      <TextArea fx:id="resultArea" layoutX="25.0" layoutY="52.0" prefHeight="200.0" prefWidth="556.0" />
-      <Label fx:id="test_lbl" layoutX="427.0" layoutY="24.0" text="Port" />
-      <ComboBox fx:id="dropdownPort" layoutX="463.0" layoutY="20.0" prefHeight="26.0" prefWidth="109.0" />
-      <Accordion layoutX="1.0" layoutY="260.0" prefHeight="110.0" prefWidth="580.0">
-        <panes>
-          <TitledPane animated="false" text="Test Port">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="clearBtn" layoutX="350.0" mnemonicParsing="false" onAction="#clearBtn" text="Clear" />
-                        <Button fx:id="testBtn" layoutX="100.0" mnemonicParsing="false" onAction="#checkConnection" text="Test Port" />
-                     </children>
-                  </AnchorPane>
-            </content>
-          </TitledPane>
-          <TitledPane animated="false" text="Client Server">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="clearBtn1" layoutX="100.0" mnemonicParsing="false" onAction="#startClient" text="Client" />
-                        <Button fx:id="testBtn1" layoutX="350.0" mnemonicParsing="false" onAction="#startServer" text="Server" />
-                     </children>
-                  </AnchorPane>
-            </content>
-          </TitledPane>
-            <TitledPane animated="false" text="Chat">
-                <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                        <children>
-                            <Button fx:id="user1_client" layoutX="100.0" mnemonicParsing="false"  text="User 1" />
-                            <Button fx:id="user2_server" layoutX="350.0" mnemonicParsing="false"  text="User 2" />
-                        </children>
-                    </AnchorPane>
-                </content>
-            </TitledPane>
-        </panes>
-      </Accordion>
-   </children>
+    <children>
+        <Label fx:id="server_lbl" layoutX="25.0" layoutY="24.0" text="Server" />
+        <TextField fx:id="urlName" layoutX="65.0" layoutY="20.0" prefHeight="25.0" prefWidth="356.0" />
+        <TextArea fx:id="resultArea" layoutX="25.0" layoutY="52.0" prefHeight="200.0" prefWidth="556.0" />
+        <Label fx:id="test_lbl" layoutX="427.0" layoutY="24.0" text="Port" />
+        <ComboBox fx:id="dropdownPort" layoutX="463.0" layoutY="20.0" prefHeight="26.0" prefWidth="109.0" />
+        <Accordion layoutX="1.0" layoutY="260.0" prefHeight="110.0" prefWidth="580.0">
+            <panes>
+                <TitledPane animated="false" text="Test Port">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="clearBtn" layoutX="350.0" mnemonicParsing="false" onAction="#clearBtn" text="Clear" />
+                                <Button fx:id="testBtn" layoutX="100.0" mnemonicParsing="false" onAction="#checkConnection" text="Test Port" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Client Server">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="clientBtn" layoutX="100.0" mnemonicParsing="false" onAction="#startClientGeneric" text="Client" />
+                                <Button fx:id="serverBtn" layoutX="350.0" mnemonicParsing="false" onAction="#startServer" text="Server" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Chat">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="user1Btn" layoutX="100.0" mnemonicParsing="false" onAction="#startUser1Client" text="User 1" />
+                                <Button fx:id="user2Btn" layoutX="350.0" mnemonicParsing="false" onAction="#startUser2Client" text="User 2" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+            </panes>
+        </Accordion>
+    </children>
 </AnchorPane>
